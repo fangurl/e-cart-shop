@@ -1,4 +1,6 @@
 import React from 'react'
+import { Route } from 'react-router';
+import Home from './pages/Home';
 
 
 function App() {
@@ -7,9 +9,13 @@ function App() {
   //   <Container>
   //     <Navbar />
   //     <Switch>
-  //       <Route path="/" exact>
-  //         <Home />
-  //       </Route>
+
+        <div>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        </div>
+
   //       <Route path="/category/:id" exact>
   //         <Category />
   //       </Route>
@@ -21,7 +27,7 @@ function App() {
   // </CartProvider>
 
 
-  <div>shop here</div>
+ 
   );
 }
 
