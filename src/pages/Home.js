@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Col, Container, Row } from 'rsuite'
+import { Col, Container, Row } from 'reactstrap'
 import categories from '../database/categories.json'
 
 
