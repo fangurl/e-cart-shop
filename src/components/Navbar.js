@@ -8,7 +8,7 @@ import {
   NavbarText,
 } from 'reactstrap';
 
-// import { ReactComponent as CartSVG } from '../images/cart.svg';
+// import { ReactComponent as CartLogo } from '../logo/CartLogo.svg';
 import { useCart } from '../lib/cart.context';
 
 const LINKS = [{ link: '/', text: 'Home' }];
@@ -38,7 +38,7 @@ const Navbar = () => {
           className="d-flex align-items-center"
           style={{ textDecoration: 'none' }}
         >
-          {/* <CartSVG width={25} /> */}
+          {/* <CartLogo width={25} /> */}
           <div
             className="circle bg-dark text-light rounded-circle d-flex justify-content-center align-items-center mx-2"
             style={{ width: 30, height: 30 }}

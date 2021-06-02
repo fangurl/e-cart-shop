@@ -1,11 +1,12 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Route, Switch } from 'react-router';
-import { Container, Navbar } from 'reactstrap';
+import { Route, Switch } from 'react-router-dom';
+import { Container } from 'reactstrap';
 import Categories from './pages/Categories'
 import Home from './pages/Home';
 import Checkout from './pages/Checkout';
 import { CartProvider } from './lib/cart.context';
+import Navbar from './components/Navbar';
 
 
 
