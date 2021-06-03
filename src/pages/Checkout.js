@@ -3,13 +3,13 @@ import { Button, ButtonGroup, Table } from 'reactstrap';
 import { useCart, useCartDispatch } from '../lib/cart.context';
 import PRODUCTS from '../database/products.json';
 
-function getComputedCheckoutItems(products, cartItems) {
-  // first filter products that were added to cart
+function getCheckoutItems(products, cartItems) {
+
   const productsInCart = products.filter(p =>
     cartItems.some(item => item.id === p.id)
   );
 
-  // attach quantity to every added product
+
   return productsInCart.map(product => {
     return {
       ...product,
@@ -23,7 +23,7 @@ const Checkout = () => {
   const dispatchCart = useCartDispatch();
   const [products] = useState(PRODUCTS);
 
-  const checkoutItems = getComputedCheckoutItems(products, cart);
+  const checkoutItems = getCheckoutItems(products, cart);
 
   const cartPriceTotal = checkoutItems.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -54,7 +54,7 @@ const Checkout = () => {
   return (
     <div>
       <h1 className="h3 mb-4">Checkout</h1>
-      <div className="bg-white p-4 shadow-sm rounded-lg">
+      <div className="bg-light p-4 shadow-sm rounded-lg">
         <Table responsive>
           <thead>
             <tr>

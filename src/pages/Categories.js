@@ -8,8 +8,7 @@ import Filter from '../components/Filter';
 import Products from '../components/Products';
 
 function getComputedProducts(products, filters) {
-  // const result = products; would create a reference thus doesn't apply
-  // [...someArray] creates a new array from elements of someArray
+
   let result = [...products];
 
   if (filters.delivery) {
